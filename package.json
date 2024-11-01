@@ -1,5 +1,5 @@
 {
-  "name": "vtt-nuxt",
+  "name": "nuxt-starter",
   "private": true,
   "type": "module",
   "scripts": {
@@ -9,9 +9,9 @@
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
     "lint-staged": "lint-staged",
-    "tsc:all": "npm --prefix ./vtt run tsc",
-    "prepare": "husky",
-    "interfaces": "typescript-json-schema tsconfig.json IBeast > json-types/IBeast.json"
+    "lint": "eslint . --fix && prettier . --write --ignore-unknown && nuxi typecheck",
+    "tsc": "nuxi typecheck",
+    "prepare": "husky"
   },
   "lint-staged": {
     "**/*.{js,ts,vue}": [
@@ -26,25 +26,24 @@
     "vue-router": "^4.3.0"
   },
   "devDependencies": {
+    "@eslint/js": "^9.13.0",
     "@mdi/js": "^7.4.47",
     "@nuxtjs/tailwindcss": "^6.11.4",
     "@tailwindcss/aspect-ratio": "^0.4.2",
     "@tailwindcss/container-queries": "^0.1.1",
     "@tailwindcss/typography": "^0.5.10",
     "@types/node": "^22.8.6",
-    "@typescript-eslint/eslint-plugin": "^7.3.1",
-    "@typescript-eslint/parser": "^7.3.1",
-    "@vue/eslint-config-typescript": "^13.0.0",
+    "@typescript-eslint/eslint-plugin": "^8.12.2",
+    "@typescript-eslint/parser": "^8.12.2",
     "autoprefixer": "^10.4.19",
     "daisyui": "^4.8.0",
-    "eslint": "^8.57.0",
-    "eslint-config-defaults": "^9.0.0",
-    "eslint-config-prettier": "^9.1.0",
+    "eslint": "^9.13.0",
+    "eslint-import-resolver-typescript": "^3.6.1",
     "eslint-plugin-import": "^2.29.1",
-    "eslint-plugin-jsdoc": "^48.2.1",
-    "eslint-plugin-promise": "^6.1.1",
+    "eslint-plugin-jsdoc": "^50.4.3",
     "eslint-plugin-regexp": "^2.3.0",
     "eslint-plugin-vue": "^9.23.0",
+    "globals": "^15.0.0",
     "gsap": "^3.12.5",
     "husky": "^9.0.11",
     "lint-staged": "^15.2.2",
@@ -54,6 +53,7 @@
     "prettier": "^3.2.5",
     "prettier-plugin-tailwindcss": "^0.6.8",
     "tslib": "^2.6.2",
-    "typescript": "^5.4.3"
+    "typescript": "^5.4.3",
+    "vue-eslint-parser": "^9.4.2"
   }
 }
