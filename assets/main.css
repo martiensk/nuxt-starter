@@ -1,0 +1,8 @@
+* {
+    font-family: OptimusPrinceps, Arial, Helvetica, sans-serif;
+}
+body,
+html,
+#__nuxt {
+    height: 100%;
+}
