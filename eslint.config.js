@@ -68,7 +68,7 @@ export default [
         rules: {
             ...eslint.configs.recommended.rules,
             ...tseslint.configs.recommended.rules,
-            ...vueeslint.configs['vue3-recommended'].rules,
+            ...vueeslint.configs['flat/recommended'].rules,
             ...regexp.configs.recommended.rules,
             'import/no-unresolved': 'off',
             '@typescript-eslint/no-unused-vars': 'error',
